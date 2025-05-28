@@ -1,29 +1,20 @@
-// Greeting alerts
+// Welcome alerts
 alert("I'm proud of you, Pamela.");
 alert("Keep it up, bb! mwa!");
 
-// Function to play background music
+// Play music when button is clicked
 function playMusic() {
-    const music = document.getElementById("bg-music");
-    music.play();
+  const audio = document.getElementById("bg-music");
+  audio.play();
 }
 
-// Confetti + Hug alert
+// Send hug and launch confetti
 function sendHug() {
-    alert("Sending virtual hug! 🤗");
-    startConfetti();
-}
+  alert("Sending virtual hug! 🤗");
 
-// Load confetti library and trigger
-function startConfetti() {
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
-    script.onload = () => {
-        confetti({
-            particleCount: 150,
-            spread: 70,
-            origin: { y: 0.6 }
-        });
-    };
-    document.body.appendChild(script);
+  confetti({
+    particleCount: 200,
+    spread: 80,
+    origin: { y: 0.6 }
+  });
 }
