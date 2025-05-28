@@ -17,7 +17,14 @@ window.onload = typeWriter;
 // Music control
 function playMusic() {
   const audio = document.getElementById("bg-music");
-  audio.play();
+  audio.play()
+    .then(() => {
+      console.log("Music started!");
+    })
+    .catch(err => {
+      alert("⚠️ Music couldn't play. Please click the button directly.");
+      console.error("Playback error:", err);
+    });
 }
 
 // Hug and confetti
