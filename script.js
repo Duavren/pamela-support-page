@@ -1,18 +1,14 @@
-alert("I'm proud of you, Pamela.");
-alert("Keep it up, bb! mwa!");
-
-// Play music
 function playMusic() {
-  const audio = document.getElementById("bg-music");
-  audio.play();
+  const music = document.getElementById('bg-music');
+  music.play();
+  alert("Playing music 🎵");
 }
 
-// Confetti blast
 function sendHug() {
-  alert("Sending virtual hug! 🤗");
   confetti({
-    particleCount: 200,
-    spread: 100,
+    particleCount: 120,
+    spread: 90,
     origin: { y: 0.6 }
   });
+  alert("Sending you a warm hug 💖");
 }
