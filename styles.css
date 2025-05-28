@@ -16,8 +16,9 @@ body {
     background-color: #fff8f0;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 600px;
+    animation: fadeIn 1.5s ease-out forwards;
 }
 
 h2 {
@@ -38,4 +39,15 @@ button {
 
 button:hover {
     background-color: #d43c65;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
