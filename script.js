@@ -17,15 +17,17 @@ window.onload = typeWriter;
 // Music control
 function playMusic() {
   const audio = document.getElementById("bg-music");
+
   audio.play()
     .then(() => {
       console.log("Music started!");
     })
     .catch(err => {
-      alert("⚠️ Music couldn't play. Please click the button directly.");
-      console.error("Playback error:", err);
+      alert("⚠️ Could not play the music. Check the file path or browser permissions.");
+      console.error("Music play error:", err);
     });
 }
+
 
 // Hug and confetti
 function sendHug() {
